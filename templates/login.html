@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+{% load static %}
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Login</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="/static/bootstrap5/css/bootstrap.min.css" rel="stylesheet">
+        <link href="/static/css/login.css" rel="stylesheet">
+        <link href="/static/css/root.css" rel="stylesheet">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <div class="login-module">
+            <div class="login-title" style="opacity: 0.1;">
+                <span>票务营销数据</span>
+                <span>统计系统</span>
+            </div>
+            <form class="login-page" action="{% url 'login' %}" method="post" style="margin-top:250px;opacity: 0.1;">
+                <div class="login-page-head">
+                    <span>登录你的账户</span>
+                    <span>还没有账户？<a href="#" class="link-info">请联系管理员</a></span>
+                </div>
+                {% if isSuccess == 'false' %}
+                <div class="login-page-error" style="opacity: 0.7;">
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        登录失败，请重新登录！
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                </div>
+                {% endif %}
+                <div class="login-page-form">
+                    <!-- 选择登录类型 -->
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" id="mySwitch" name="darkmode" value="yes" checked>
+                        <label class="form-check-label" for="mySwitch">
+                            <span>工号登录</span>
+                            <span style="color: rgba(0, 0, 0, 0.482);"> | </span>
+                            <span style="color: rgba(0, 0, 0, 0.482);">用户名登录</span>
+                        </label>
+                    </div>
+                    <!-- 用户名输入框 -->
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" style="background-color: white;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-people" viewBox="0 0 16 16">
+                                <path d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8Zm-7.978-1A.261.261 0 0 1 7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002a.274.274 0 0 1-.014.002H7.022ZM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816ZM4.92 10A5.493 5.493 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275ZM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0Zm3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4Z"/>
+                            </svg>
+                        </span>
+                        <input id="username" name="username" type="text" class="form-control" placeholder="请输入工号" aria-describedby="usernameValidation" required>
+                    </div>
+                    <!--密码输入框-->
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" style="background-color: white;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-key" viewBox="0 0 16 16">
+                                <path d="M0 8a4 4 0 0 1 7.465-2H14a.5.5 0 0 1 .354.146l1.5 1.5a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0L13 9.207l-.646.647a.5.5 0 0 1-.708 0L11 9.207l-.646.647a.5.5 0 0 1-.708 0L9 9.207l-.646.647A.5.5 0 0 1 8 10h-.535A4 4 0 0 1 0 8zm4-3a3 3 0 1 0 2.712 4.285A.5.5 0 0 1 7.163 9h.63l.853-.854a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.793-.793-1-1h-6.63a.5.5 0 0 1-.451-.285A3 3 0 0 0 4 5z"/>
+                                <path d="M4 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                            </svg>
+                        </span>
+                        <input id="password" name="password" type="password" class="form-control" placeholder="请输入密码" aria-describedby="password" required>
+                    </div>
+                    <!--是否记住我-->
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="remember">
+                        <label class="form-check-label" for="remember">记住我</label>
+                    </div>
+                </div>
+                <div class="login-page-button">
+                    <button type="submit" class="btn btn-primary" id="submit">登录</button>
+                </div>
+                {% csrf_token %}
+            </form>
+        </div>
+        <script src="/static/bootstrap5/js/bootstrap.min.js"></script>
+        <script src="/static/js/jquery-3.6.1.min.js"></script>
+        <script src="/static/js/jquery.cookie.js"></script>
+        <script src="/static/js/login.js"></script>
+    </body>
+</html>
+
