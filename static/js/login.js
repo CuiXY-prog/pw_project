@@ -23,7 +23,6 @@ $(document).ready(function(){
         $("#remember").attr("checked", remember)
     }
 
-    console.log(!window.isNaN(mySwitch) && mySwitch === 'false')
     if(mySwitch === 'false'){
         $("#mySwitch").attr("checked", false)
         $(".form-check-label").children().eq(0).css("color", "rgba(0, 0, 0, 0.482)")
@@ -66,7 +65,11 @@ $(document).ready(function(){
         }
 
         // 对密码和用户名进行加密
-        
+        var encrypt = new JSEncrypt()
+        encrypt.setPublicKey($('#pubkey').val())
+        var encrypted = encrypt.encrypt($('#password').val())
+        $('#password').val(encrypted)
+
         $('#loginForm').submit()
     })
 })

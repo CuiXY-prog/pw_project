@@ -16,8 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, re_path, include
 from apps.login.views import LoginView
+from apps.home.views import HomePageView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('login/', LoginView.as_view(), name='login')       # 登录机制
+    path('login/', LoginView.as_view(), name='login'),      # 登录机制
+    path('', HomePageView.as_view(), name='home')           # 主页
 ]
