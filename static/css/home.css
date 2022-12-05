@@ -1,0 +1,48 @@
+/* navbar */
+
+.navbar {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.collapse {
+    padding-left: 200px;
+}
+
+
+/* 主要模块 */
+
+.mainshow {
+    display: grid;
+    grid-template-columns: 2fr 8fr;
+    align-items: center;
+    justify-items: center;
+    gap: 10px;
+    padding: 30px 300px;
+}
+
+.mainshow-left {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    gap: 10px;
+}
+
+.mainshow-right {
+    display: grid;
+    grid-template-rows: 40px 1fr 40px;
+    align-items: center;
+    justify-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.abstract {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    align-items: center;
+    justify-items: center;
+    width: 100%;
+    font-size: 14px;
+}

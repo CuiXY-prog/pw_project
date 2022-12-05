@@ -4,25 +4,43 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="/static/bootstrap5/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="/static/css/home.css" rel="stylesheet">
+    <link href="/static/css/root.css" rel="stylesheet">
     <title>HomePage</title>
 </head>
 <body>
     <div class="main">
-        <div class="nav">
-            <!-- 导航 -->
-            <div class="nav-left">
-                <!-- 系统名称以及图表 -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">票务数据分析系统</a>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">首页</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">数据统计</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">数据分析</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">数据导入</a>
+                        </li>
+                    </ul>
+                </div>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit"><span class="bi bi-search"></span></button>
+                </form>
             </div>
-            <div class="nav-ceneter">
-                <!-- 功能 -->
-            </div>
-            <div class="nav-right">
-                <!-- 搜索以及登录头像显示 -->
-            </div>
-        </div>
-        <div class="main">
+        </nav>
+        <div class="mainshow">
             <!-- 主要模块 -->
-            <div class="left">
+            <div class="mainshow-left">
                 <div class="logininfo">
                     <!-- 登录信息 -->
                     <div class="logininfo-head">
@@ -31,6 +49,9 @@
                     </div>
                     <div class="logininfo-body">
                         <div class="card" style="width: 18rem;">
+                            <div class="card-header">
+                                操作信息
+                            </div>
                             <ul class="list-group list-group-flush">
                                 <li class="list-group-item">上次登录</li>
                                 <li class="list-group-item">查询次数</li>
@@ -42,26 +63,24 @@
                 </div>
                 <div class="yesday">
                     <!-- 昨日票务营收 -->
-                    <div class="yesday-head">
-                        <span>昨日票务营收</span>
-                    </div>
-                    <div class="yesday-body">
-                        <div class="card" style="width: 18rem;">
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item">现金</li>
-                                <li class="list-group-item">收入</li>
-                                <li class="list-group-item">二维码</li>
-                                <li class="list-group-item">银联闪付</li>
-                                <li class="list-group-item">市民卡</li>
-                                <li class="list-group-item">合计</li>
-                            </ul>
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-header">
+                            昨日票务营收
                         </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">现金</li>
+                            <li class="list-group-item">收入</li>
+                            <li class="list-group-item">二维码</li>
+                            <li class="list-group-item">银联闪付</li>
+                            <li class="list-group-item">市民卡</li>
+                            <li class="list-group-item">合计</li>
+                        </ul>
                     </div>
                 </div>
             </div>
-            <div class="right">
+            <div class="mainshow-right">
                 <!-- 票务走势图 -->
-                <span>票务收入走势图(银行实收)</span>
+                <span>票务收入走势图（银行实收）</span>
                 <div class="linechart">
                     <!-- 图表 https://blog.csdn.net/a1076454380/article/details/101214621 -->
                 </div>
@@ -132,5 +151,11 @@
             <!-- 尾部 -->
         </div>
     </div>
+    
+    <script src="/static/bootstrap5/js/bootstrap.min.js"></script>
+    <script src="/static/bootstrap5/js/bootstrap.bundle.min.js"></script>
+    <script src="/static/js/jsencrypt.min.js"></script>
+    <script src="/static/js/jquery-3.6.1.min.js"></script>
+    <script src="/static/js/jquery.cookie.js"></script>
 </body>
 </html>
