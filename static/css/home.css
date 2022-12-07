@@ -46,3 +46,85 @@
     width: 100%;
     font-size: 14px;
 }
+
+/* 票务模块 */
+.pw {
+    display: grid;
+    grid-template-columns: 300px 1fr 300px;
+    align-items: center;
+    justify-items: center;
+
+    padding: 30px 300px;
+}
+
+.pw-left{
+    display: grid;
+    grid-template-rows: 100px 1fr;
+    align-items: center;
+    justify-items: center;
+    height: 100%;
+}
+
+.pw-proportion{
+    display: grid;
+    grid-template-rows: 100px 1fr;
+    align-items: center;
+    justify-items: center;
+    height: 100%;
+}
+
+.pw-other{
+    display: grid;
+    grid-template-rows: 4fr 3fr;
+    align-items: center;
+    justify-items: center;
+    gap: 50px;
+}
+
+/* 营销模块 */
+.yx{
+    display: grid;
+    grid-template-columns: 300px 1fr 300px;
+    align-items: center;
+    justify-items: center;
+    padding: 30px 300px;
+}
+
+.yx-center{
+    display: grid;
+    grid-template-rows: 100px 1fr;
+    align-items: center;
+    justify-items: center;
+    height: 100%;
+}
+
+.yx-right{
+    display: grid;
+    grid-template-rows: 4fr 3fr;
+    align-items: center;
+    justify-items: center;
+    gap: 50px;
+}
+
+/* 功能解释 */
+.function{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-items: center;
+    padding: 30px 300px;
+}
+
+.function-tj{
+    justify-self: start;
+}
+
+.function-rd{
+    justify-self: end;
+}
+
+/* 网站尾部 */
+.foot{
+    height: 200px;
+    background-color: rgba(185, 185, 185, 0.425);
+}
