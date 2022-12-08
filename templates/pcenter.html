@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="/static/bootstrap5/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="/static/css/root.css" rel="stylesheet">
+    <title>pcenter</title>
+</head>
+<body>
+    <div class="pcenter">
+        <div class="left">
+            <img src="..." class="img-fluid" alt="...">
+            <span>用户名</span>
+            <button type="button" class="btn btn-warning">退出登录</button>
+        </div>
+        <div class="right">
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a class="nav-link active"  data-bs-toggle="tab" href="#pinfo">个人信息</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-bs-toggle="tab" href="#pwdChange">密码修改</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-bs-toggle="tab" href="#loginInfo">最近登录</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-bs-toggle="tab" href="#operationInfo">操作信息</a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane fade show active" id="pinfo">
+                    <!-- 个人信息 -->
+                    <table class="table">
+                        <tbody>
+                          <tr>
+                            <td>用户名</td>
+                            <td>xxx</td>
+                          </tr>
+                          <tr>
+                            <td>昵称</td>
+                            <td>xxx</td>
+                          </tr>
+                          <tr>
+                            <td>员工编号</td>
+                            <td>xxx</td>
+                          </tr>
+                          <tr>
+                            <td>所在部门</td>
+                            <td>xxx</td>
+                          </tr>
+                          <tr>
+                            <td>担任角色</td>
+                            <td>xxx</td>
+                          </tr>
+                          <tr>
+                            <td>手机号码</td>
+                            <td>xxx</td>
+                          </tr>
+                          <tr>
+                            <td>电子邮件</td>
+                            <td>xxx</td>
+                          </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="tab-pane fade" id="pwdChange">
+                    <!-- 密码修改 -->
+                    <form action="">
+                        <div class="mb-3">
+                            <label for="opwd" class="form-label">原密码:</label>
+                            <input type="password" class="form-control" id="opwd" placeholder="请输入原密码">
+                        </div>
+                        <div class="mb-3">
+                            <label for="npwd" class="form-label">新密码:</label>
+                            <input type="password" class="form-control" id="npwd" placeholder="请输入原密码">
+                        </div>
+                        <div class="mb-3">
+                            <label for="cpwd" class="form-label">再次输入新密码:</label>
+                            <input type="password" class="form-control" id="cpwd" placeholder="确认新密码">
+                        </div>
+                    </form>
+                </div>
+                <div class="tab-pane fade" id="loginInfo">
+                    789789
+                </div>
+                <div class="tab-pane fade" id="operationInfo">
+                    789789
+                 </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="/static/bootstrap5/js/bootstrap.min.js"></script>
+    <script src="/static/bootstrap5/js/bootstrap.bundle.min.js"></script>
+    <script src="/static/js/jquery-3.6.1.min.js"></script>
+    <script src="/static/js/jquery.cookie.js"></script>
+</body>
+</html>

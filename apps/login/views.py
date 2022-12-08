@@ -42,3 +42,10 @@ class LoginView(View):
             return render(request, 'login.html', {'isSuccess':'false'})
         
         return render(request, 'login.html', {'isSuccess':'true'})
+
+class PersonalCenterView(View):
+    def get(self, request, *args, **kwargs):
+        return render(request, 'pcenter.html')
+
+    def post(self, request, *args, **kwargs):
+        return render(request, 'pcenter.html')

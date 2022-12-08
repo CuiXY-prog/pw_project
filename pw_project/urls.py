@@ -15,11 +15,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, re_path, include
-from apps.login.views import LoginView
+from apps.login.views import LoginView, PersonalCenterView
 from apps.home.views import HomePageView
+from apps.display.views import DisplayView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('login/', LoginView.as_view(), name='login'),      # 登录机制
-    path('', HomePageView.as_view(), name='home')           # 主页
+    path('login/', LoginView.as_view(), name='login'),                  # 登录机制
+    path('', HomePageView.as_view(), name='home'),                      # 主页
+    path('pcenter/', PersonalCenterView.as_view(), name='login'),       # 个人中心
+    path('display/', DisplayView.as_view(), name='display'),            # 个人中心
 ]

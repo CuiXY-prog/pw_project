@@ -17,6 +17,7 @@ class UserProfile(AbstractUser):
     user_department = models.CharField(max_length=50, verbose_name="所在部门", default="")
     user_role = models.CharField(max_length=50, verbose_name="担任角色", default="")
     user_phone = models.CharField(max_length=20, verbose_name="手机号码", default="")
+    user_mail = models.CharField(max_length=30, verbose_name="电子邮件", default="")
     user_avator = models.ImageField(upload_to='static/imgs/', verbose_name="用户头像")
     
     class Meta:
