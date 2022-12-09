@@ -1,0 +1,18 @@
+/* navbar */
+
+.navbar {
+    padding-left: 50px;
+    padding-right: 50px;
+    position: sticky;
+    top: 0px;
+    z-index: 200;
+}
+
+/* 主要模块 */
+.display{
+    padding: 30px 300px;
+}
+
+.tab-content{
+    width: 100%;
+}

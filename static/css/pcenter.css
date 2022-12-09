@@ -1,0 +1,42 @@
+/* navbar */
+.navbar {
+    padding-left: 50px;
+    padding-right: 50px;
+    position: sticky;
+    top: 0px;
+    z-index: 200;
+}
+
+.collapse {
+    padding-left: 200px;
+}
+
+/* 主模块 */
+.pcenter{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    justify-items: center;
+    gap: 20px;
+    padding: 60px 300px;
+    height: 550px;
+}
+
+/* 左边的 */
+.left{
+    display: grid;
+    grid-template-rows: 100px 40px 1fr 60px;
+    align-items: center;
+    justify-items: center;
+}
+
+/* 右边的 */
+.right{
+    align-self: start;
+    width: 100%;
+}
+
+.tab-content{
+    padding: 20px;
+}
+

@@ -7,10 +7,36 @@
     
     <link href="/static/bootstrap5/css/bootstrap.min.css" rel="stylesheet">
     <link href="/static/icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="/static/css/pcenter.css" rel="stylesheet">
     <link href="/static/css/root.css" rel="stylesheet">
     <title>pcenter</title>
 </head>
 <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">票务数据分析系统</a>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">首页</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">数据统计</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">数据分析</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">数据导入</a>
+                        </li>
+                    </ul>
+                </div>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit"><span class="bi bi-search"></span></button>
+                </form>
+            </div>
+    </nav>
     <div class="pcenter">
         <div class="left">
             <img src="..." class="img-fluid" alt="...">
@@ -35,38 +61,67 @@
             <div class="tab-content">
                 <div class="tab-pane fade show active" id="pinfo">
                     <!-- 个人信息 -->
-                    <table class="table">
-                        <tbody>
-                          <tr>
-                            <td>用户名</td>
-                            <td>xxx</td>
-                          </tr>
-                          <tr>
-                            <td>昵称</td>
-                            <td>xxx</td>
-                          </tr>
-                          <tr>
-                            <td>员工编号</td>
-                            <td>xxx</td>
-                          </tr>
-                          <tr>
-                            <td>所在部门</td>
-                            <td>xxx</td>
-                          </tr>
-                          <tr>
-                            <td>担任角色</td>
-                            <td>xxx</td>
-                          </tr>
-                          <tr>
-                            <td>手机号码</td>
-                            <td>xxx</td>
-                          </tr>
-                          <tr>
-                            <td>电子邮件</td>
-                            <td>xxx</td>
-                          </tr>
-                        </tbody>
-                    </table>
+                    <div class="infoShow">
+                        <table class="table table-striped table-bordered">
+                            <tbody>
+                            <tr>
+                                <td>用户名</td>
+                                <td>xxx</td>
+                            </tr>
+                            <tr>
+                                <td>昵称</td>
+                                <td>xxx</td>
+                            </tr>
+                            <tr>
+                                <td>员工编号</td>
+                                <td>xxx</td>
+                            </tr>
+                            <tr>
+                                <td>所在部门</td>
+                                <td>xxx</td>
+                            </tr>
+                            <tr>
+                                <td>担任角色</td>
+                                <td>xxx</td>
+                            </tr>
+                            <tr>
+                                <td>手机号码</td>
+                                <td>xxx</td>
+                            </tr>
+                            <tr>
+                                <td>电子邮件</td>
+                                <td>xxx</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <button type="button" class="btn btn-primary">修 改</button>
+                    </div>
+                    <div class="infoChange" style="display: none;">
+                        <form action="">
+                            <div class="mb-3">
+                                <label for="nc" class="form-label">昵称:</label>
+                                <input type="text" class="form-control" id="nc" placeholder="请输入昵称">
+                            </div>
+                            <div class="mb-3">
+                                <label for="bm" class="form-label">所在部门:</label>
+                                <input type="text" class="form-control" id="bm" placeholder="请输入所在部门">
+                            </div>
+                            <div class="mb-3">
+                                <label for="js" class="form-label">担任角色:</label>
+                                <input type="text" class="form-control" id="js" placeholder="请输入担任角色">
+                            </div>
+                            <div class="mb-3">
+                                <label for="sj" class="form-label">手机号码:</label>
+                                <input type="text" class="form-control" id="sj" placeholder="请输入手机号码">
+                            </div>
+                            <div class="mb-3">
+                                <label for="yj" class="form-label">电子邮件:</label>
+                                <input type="text" class="form-control" id="yj" placeholder="请输入电子邮件">
+                            </div>
+                        </form>
+                        <button type="button" class="btn btn-warning">保 存</button>
+                        <button type="button" class="btn btn-primary" style="margin-left: 10px;">取 消</button>
+                    </div>
                 </div>
                 <div class="tab-pane fade" id="pwdChange">
                     <!-- 密码修改 -->
@@ -84,6 +139,8 @@
                             <input type="password" class="form-control" id="cpwd" placeholder="确认新密码">
                         </div>
                     </form>
+                    <button type="button" class="btn btn-warning">确 定</button>
+                    <button type="button" class="btn btn-primary" style="margin-left: 10px;">取 消</button>
                 </div>
                 <div class="tab-pane fade" id="loginInfo">
                     789789

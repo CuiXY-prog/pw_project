@@ -3,6 +3,9 @@
 .navbar {
     padding-left: 50px;
     padding-right: 50px;
+    position: sticky;
+    top: 0px;
+    z-index: 200;
 }
 
 .collapse {
